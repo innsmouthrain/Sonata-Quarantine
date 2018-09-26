@@ -5,9 +5,9 @@ var parentDir = path.join(__dirname, '../');
 
 module.exports = {
 	mode: 'development',
-	entry: [
-		path.join(__dirname, './src//index.js')
-	],
+	entry: {
+		app: './src/index'
+	},
 
 	module: {
 		rules: [{
