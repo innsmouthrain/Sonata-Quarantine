@@ -1,0 +1,40 @@
+{
+  "name": "sonata",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Really very good business",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "^1.1.5",
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "webpack-cli": "^3.1.1"
+  },
+  "scripts": {
+    "babel": "babel --presets env src/index.js -o build/main.bundle.js",
+    "test": "tape test.js",
+    "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack.dev.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/innsmouthrain/sonata.git"
+  },
+  "keywords": [
+    "elaborate",
+    "troll"
+  ],
+  "author": "moth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/innsmouthrain/sonata/issues"
+  },
+  "homepage": "https://github.com/innsmouthrain/sonata#readme"
+}
