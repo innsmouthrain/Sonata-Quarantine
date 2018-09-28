@@ -3,37 +3,52 @@
   "version": "0.1.0",
   "private": true,
   "description": "Really very good business",
-  "dependencies": {
-    "mongodb": "^3.1.6",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts": "^1.1.5",
-    "webpack": "^4.20.2",
-    "webpack-dev-server": "^3.1.9"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.1.0",
-    "@babel/core": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "webpack-cli": "^3.1.1"
-  },
   "scripts": {
-    "babel": "babel --presets env src/index.js -o build/main.bundle.js",
-    "test": "tape test.js",
-    "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack.dev.config.js"
+    "test": "istanbul cover tape ./test/*.test.js | faucet",
+    "front-end-test": "tape ./frontend/test/* | faucet",
+    "front-end-coverage": "istanbul cover tape ./frontend/test/* | tap-spec",
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "coverage": "istanbul cover tape ./test/*.test.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
+    "dev": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/innsmouthrain/sonata.git"
   },
+  "author": "moth",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "jsdom": "^12.0.0",
+    "mongodb": "^3.1.6",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "^1.1.5",
+    "tape": "^4.9.1",
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "eslint": "^5.6.0",
+    "eslint-plugin-react": "^7.11.1",
+    "html-webpack-plugin": "^3.2.0",
+    "istanbul": "^0.4.5",
+    "mini-css-extract-plugin": "^0.4.3",
+    "pre-commit": "^1.2.2",
+    "style-loader": "^0.23.0",
+    "tap-spec": "^5.0.0",
+    "webpack-cli": "^3.1.1"
+  },
   "keywords": [
     "elaborate",
     "troll"
   ],
-  "author": "moth",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/innsmouthrain/sonata/issues"
   },
