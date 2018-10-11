@@ -6,7 +6,7 @@
 feature list:
 - a website
     - with styling
-    - menues
+    - menus
     - animation
     - forms
 - message board / forum
@@ -43,7 +43,7 @@ so I want to make a
 
 with somewhat typical website interfaces
 
-menues! let's have menues
+menus! let's have menus
 
 forms! Yes, let's also have fucking forms
 
@@ -63,3 +63,61 @@ okay let's go, where do we start?
 we start by creating tests
 for what
 for a MUD
+
+message board
+has:
+- users
+- threads
+- messages
+- submission form
+
+with my silly pet project MUD
+I might find it more rewarding to
+focus on the MUD aspects
+
+MUD features:
+- Character objects
+  - playable
+  - non-playable
+- environment
+  - rooms
+  - objects in the rooms
+
+Character Object Specification draft:
+- Methods
+  - Travel
+    - Walk
+    - Teleport
+  - Communicate
+    - Emote
+    - Talk
+    - Shout
+    - Visible actions
+  - Receive Events
+    - On specified channels
+      - Local
+      - Remote
+- Properties
+  - Position coords
+  - Inventory
+    - Money
+    - Backpack
+    - Wearables
+
+Map specification
+- 3d coord. system
+- Room objects take up one coord
+
+Room object spec.
+- Methods
+  - Mutate state
+    - Description
+    - Inventory
+- Properties
+    - Co-ordinates
+    - Description
+    - State
+      - Room inventory
+      - Other properties
+    - Exits
+      - up to 4 directions

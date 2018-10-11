@@ -6,7 +6,7 @@ var path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
-    template: './index.html',
+    template: './frontend/index.html',
     filename: './index.html'
 });
 
